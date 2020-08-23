@@ -1,6 +1,6 @@
 # AribaNetwork_CatalogUpdateRequest_CIF
 
-###This is to upload CIF catalog file to Ariba Network supplier account. 
+### This is to upload CIF catalog file to Ariba Network supplier account. 
 
 # Prerequisite's 
 * You need have a supplier ANID on Ariba Network (https://service.ariba.com/Supplier.aw/)
