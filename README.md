@@ -18,7 +18,7 @@ Ariba provides cXML solution guidelines and recommendation to supplement the gen
 * Enter Supplier_ANID
 * Enter Sender_ANID which should be your Supplier_ANID
 * Enter Buyer_ANID
-* Here I have been using domain as NetworkID, incase you want to use something else like your DUNS or userID, check cXML Solutions guide from (https://github.com/harshhjain/AribaNetwork_CatalogUpdateRequest_CIF/tree/master/Related%20Documentation) and use one of the supported domain. 
+* Here I have been using domain as NetworkID, incase you want to use something else like your DUNS or userID, check cXML Solutions guide from [here] (https://github.com/harshhjain/AribaNetwork_CatalogUpdateRequest_CIF/tree/master/Related%20Documentation) and use one of the supported domain. 
 * Replace ********* with your Supplier ANID's SharedSecret
 * Replace 'Name' with your catalog name which you want to display in AN UI. 
 * Replace 'Catalog Description' with your Catalog Description which you want to display in AN UI. 
