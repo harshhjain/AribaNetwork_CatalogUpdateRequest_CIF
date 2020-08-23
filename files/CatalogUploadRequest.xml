@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cXML SYSTEM "http://xml.cXML.org/schemas/cXML/1.2.025/cXML.dtd">
+<cXML payloadID="1597681949320" timestamp="2020-08-17 09:32:29.322" version="1.2.025" xml:lang="en-US">
+  <Header>
+    <From>
+      <Credential domain="NetworkID">
+        <Identity>AN01000343488</Identity>
+      </Credential>
+    </From>
+    <To>
+      <Credential domain="NetworkID">
+        <Identity>AN01000343485</Identity>
+      </Credential>
+    </To>
+    <Sender>
+      <Credential domain="NetworkID">
+        <Identity>AN01000343488</Identity>
+        <SharedSecret>Ariba@12345@</SharedSecret>
+      </Credential>
+      <UserAgent>User Agent v1.0</UserAgent>
+    </Sender>
+  </Header>
+  <Request>
+    <CatalogUploadRequest operation="new">
+      <CatalogName xml:lang="en-US">1234_Idea</CatalogName>
+      <Description xml:lang="en-US">Catalog Description</Description>
+      <Attachment>
+        <URL>cid:attachment</URL>
+      </Attachment>
+      <AutoPublish enabled="false"/>
+      <Notification>
+        <Email>email@email.com</Email>
+        <URLPost enabled="true"/>
+      </Notification>
+    </CatalogUploadRequest>
+  </Request>
+</cXML>
