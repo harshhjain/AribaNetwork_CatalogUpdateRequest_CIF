@@ -17,7 +17,7 @@
         <Identity>supplier ANID</Identity>
         <SharedSecret>some shared secret</SharedSecret>
       </Credential>
-      <UserAgent>User Agent v1.0</UserAgent>
+      <UserAgent>AribaNetwork_CatalogUpdateRequest_CIF</UserAgent>
     </Sender>
   </Header>
   <Request>
