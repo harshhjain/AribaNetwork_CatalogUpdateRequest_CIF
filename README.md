@@ -11,7 +11,7 @@
 ### Update 'config.properties' which should go in to cXML-CatalogUploadREquest
 
 * Enter the DTD version you want to use, as of Aug 2020, Ariba Network is on version 1.2.046. AN is always backward compatible. 
-Ariba provides cXML solution guidelines and recommendation to supplement the general description of cXML provided by the cXML Reference Guide available at http://www.cxml.org .
+Ariba provides cXML solution guidelines and recommendation to supplement the general description of cXML provided by the cXML Reference Guide available [here](http://www.cxml.org).
 
 * Enter URL where you want to URL to be posted, as of Aug 2020 'https://service.ariba.com/ANCatalogProcessor.aw/ad/catalog' is the URL, you can check the lastest URL by posting a ProfileRequest to AN. 
 * operationTpe can have two values (new|update)
