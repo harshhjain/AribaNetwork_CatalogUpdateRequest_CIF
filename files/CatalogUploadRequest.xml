@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE cXML SYSTEM "http://xml.cXML.org/schemas/cXML/1.2.025/cXML.dtd">
-<cXML payloadID="1597681949320" timestamp="2020-08-17 09:32:29.322" version="1.2.025" xml:lang="en-US">
+<cXML payloadID="1597672939956" timestamp="2020-08-17 07:02:19.957" version="1.2.025" xml:lang="en-US">
   <Header>
     <From>
       <Credential domain="NetworkID">
-        <Identity>AN01000343488</Identity>
+        <Identity>supplier ANID</Identity>
       </Credential>
     </From>
     <To>
       <Credential domain="NetworkID">
-        <Identity>AN01000343485</Identity>
+        <Identity>buyer ANID</Identity>
       </Credential>
     </To>
     <Sender>
       <Credential domain="NetworkID">
-        <Identity>AN01000343488</Identity>
-        <SharedSecret>Ariba@12345@</SharedSecret>
+        <Identity>supplier ANID</Identity>
+        <SharedSecret>some shared secret</SharedSecret>
       </Credential>
       <UserAgent>User Agent v1.0</UserAgent>
     </Sender>
   </Header>
   <Request>
-    <CatalogUploadRequest operation="new">
-      <CatalogName xml:lang="en-US">1234_Idea</CatalogName>
+    <CatalogUploadRequest operation="update">
+      <CatalogName xml:lang="en-US">catalog subscription name</CatalogName>
       <Description xml:lang="en-US">Catalog Description</Description>
       <Attachment>
         <URL>cid:attachment</URL>
       </Attachment>
-      <AutoPublish enabled="false"/>
+      <AutoPublish enabled="true"/>
       <Notification>
         <Email>email@email.com</Email>
         <URLPost enabled="true"/>
