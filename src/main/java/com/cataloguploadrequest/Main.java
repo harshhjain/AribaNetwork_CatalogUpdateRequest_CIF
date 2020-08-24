@@ -10,10 +10,10 @@ public class Main {
 
     public static void main(String[] args) throws IOException, ParserConfigurationException, TransformerException {
 //JAXBException,
-        com.cataloguploadrequestv2.cXMLBuilder cb = new com.cataloguploadrequestv2.cXMLBuilder();
+        com.cataloguploadrequest.cXMLBuilder cb = new com.cataloguploadrequest.cXMLBuilder();
         cb.createcXML();
 
-        com.cataloguploadrequestv2.Post p = new com.cataloguploadrequestv2.Post();
+        com.cataloguploadrequest.Post p = new com.cataloguploadrequest.Post();
         p.HttpPost();
 
     }

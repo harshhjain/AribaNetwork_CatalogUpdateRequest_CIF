@@ -1,4 +1,4 @@
-package com.cataloguploadrequestv2;
+package com.cataloguploadrequest;
 
 import org.w3c.dom.DOMImplementation;
 import org.w3c.dom.Document;

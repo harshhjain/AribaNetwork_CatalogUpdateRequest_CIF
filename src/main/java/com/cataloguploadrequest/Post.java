@@ -1,4 +1,4 @@
-package com.cataloguploadrequestv2;
+package com.cataloguploadrequest;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
