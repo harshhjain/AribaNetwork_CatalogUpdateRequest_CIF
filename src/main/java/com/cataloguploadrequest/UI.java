@@ -1,4 +1,4 @@
-//package com.cataloguploadrequest;
+package com.cataloguploadrequest;
 
 import javax.swing.*;
 import java.awt.*;
@@ -20,7 +20,7 @@ class Inc{
 }
 
 class UI{
-    public static void UI() throws FileNotFoundException, IOException{
+    public static void userInterface() throws FileNotFoundException, IOException{
         Properties properties = new Properties();
         FileInputStream input = new FileInputStream("config.properties");
         properties.load(input);

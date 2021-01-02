@@ -1,77 +1,41 @@
 package com.cataloguploadrequest;
 
-import org.apache.http.*;
-import org.apache.http.HttpEntity;
-import org.apache.http.HttpResponse;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.entity.mime.FormBodyPartBuilder;
-import org.apache.http.entity.mime.MultipartEntityBuilder;
-import org.apache.http.entity.mime.content.FileBody;
-import org.apache.http.impl.client.CloseableHttpClient;
-import org.apache.http.impl.client.HttpClientBuilder;
+import java.net.http.*;
+import java.net.http.HttpRequest.BodyPublishers;
+import java.net.http.HttpResponse.BodyHandlers;
+import java.net.URI;
 
 import java.io.*;
 import java.util.Properties;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.io.IOException;
+import java.lang.InterruptedException;
+import java.net.URISyntaxException;
+import java.nio.file.Paths;
 
 public class Post {
 
-    public void HttpPost() {
+    public static void HttpPost() throws IOException, URISyntaxException, InterruptedException{
+        Properties properties = new Properties();
+        FileInputStream input = new FileInputStream("config.properties");
+        properties.load(input);
+        
+        String URL = properties.getProperty("URL");
+        String userAgent = properties.getProperty("userAgent");
 
-        try {
-            Properties properties = new Properties();
-            FileInputStream input = new FileInputStream("config.properties");
-            properties.load(input);
-            
-            String URL = properties.getProperty("URL");
-            String userAgent = properties.getProperty("userAgent");
-            
-            
-            try {
-                CloseableHttpClient client = HttpClientBuilder.create().build();
-                HttpPost httpPost = new HttpPost(URL);
-                httpPost.setHeader("User-Agent", userAgent);
+        HttpClient client = HttpClient.newHttpClient();
 
-                MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+        HttpRequest request = HttpRequest.newBuilder(new URI(URL))
+                    .header("User-Agent", userAgent)
+                    .POST(BodyPublishers.ofFile(Paths.get("files/CatalogUploadRequest.xml")))
+                    .POST(BodyPublishers.ofFile(Paths.get("files/catalog_1.cif")))
+                    .build();
 
-                FormBodyPartBuilder part1 = FormBodyPartBuilder.create()
-                        .setName("cXML Name")
-                        .setField("Content-Type", "text/xml")
-                        .setBody(new FileBody(new File("files/CatalogUploadRequest.xml")));
-
-                FormBodyPartBuilder part2 = FormBodyPartBuilder.create()
-                        .setName("CIF")
-                        .setField("Content-Type", "text/plain")
-                        .setBody(new FileBody(new File("files/catalog_1.cif")));
-
-                builder.addPart(part1.build());
-                builder.addPart(part2.build());
-
-                httpPost.setEntity(builder.build());
-
-                HttpEntity entity = httpPost.getEntity();
-
-                HttpResponse response = client.execute(httpPost);                
-                
-                BufferedReader reader = new BufferedReader(new InputStreamReader(response.getEntity().getContent()));
-
-                while (reader.readLine() != null) {
-                    System.out.println(reader.readLine());
-                }
-                System.out.println(response.getStatusLine());
-                System.out.println(response.toString());
-                
-                
-            } catch (IOException ex) {
-                Logger.getLogger(Post.class.getName()).log(Level.SEVERE, null, ex);
-            }
-
-        } catch (FileNotFoundException ex) {
-            Logger.getLogger(Post.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IOException ex) {
-            Logger.getLogger(Post.class.getName()).log(Level.SEVERE, null, ex);
-        }
-
+        HttpResponse<String> response = client.send(request, BodyHandlers.ofString());
+        System.out.println(response.body());
+    }
+    public static void main(String []args) throws IOException, URISyntaxException, InterruptedException{
+        HttpPost();
     }
 }
