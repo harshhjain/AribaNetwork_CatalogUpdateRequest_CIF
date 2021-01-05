@@ -31,4 +31,4 @@ Ariba provides cXML solution guidelines and recommendation to supplement the gen
 
 ### How to contact me
  * E-mail: [harshh.jain@gmail.com](mailto:harshh.jain@gmail.com)
- * LinkedIn: [My Profile](https://www.linkedin.com/in/harsh-vardhan-jain-a651816a/)
+ * LinkedIn: [Harsh Vardhan Jain](https://www.linkedin.com/in/harsh-vardhan-jain-a651816a/)
