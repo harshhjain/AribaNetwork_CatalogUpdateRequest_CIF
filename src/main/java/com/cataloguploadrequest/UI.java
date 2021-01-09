@@ -17,7 +17,7 @@ class Inc{
 }
 
 class UI{
-    public static void userInterface() throws FileNotFoundException, IOException{
+    public static JFrame userInterface() throws FileNotFoundException, IOException{
         Properties properties = new Properties();
         FileInputStream input = new FileInputStream("config.properties");
         properties.load(input);
@@ -110,7 +110,7 @@ class UI{
 
         JTextField catalogDescriptionField = new JTextField(properties.getProperty("catalogDescription"));
         catalogDescriptionField.setBounds(250, 270, 400, 20);
-        catalogDescriptionField.setToolTipText("Replace 'Catalog Description' with your Catalog Description which you want to display in AN UI. ");
+        catalogDescriptionField.setToolTipText("Replace 'Catalog Description' with description which you want to display on AN UI. ");
         f.add(catalogDescriptionField);
 
         /////////////////////////////
@@ -128,7 +128,7 @@ class UI{
         userAgentValueLabel.setBounds(30, 330, 200, 20);
         f.add(userAgentValueLabel);
 
-        JLabel userAgentValueField = new JLabel("HVJ Poster Tool");
+        JLabel userAgentValueField = new JLabel(properties.getProperty("userAgentValue"));
         userAgentValueField.setBounds(250, 330, 200, 20);
         f.add(userAgentValueField);
 
@@ -137,7 +137,7 @@ class UI{
         XMLLangLabel.setBounds(30, 360, 200, 20);
         f.add(XMLLangLabel);
 
-        JLabel XMLLangField = new JLabel("en-US");
+        JLabel XMLLangField = new JLabel(properties.getProperty("XMLLang"));
         XMLLangField.setBounds(250, 360, 100, 20);
         f.add(XMLLangField);
 
@@ -146,7 +146,7 @@ class UI{
         domainTypeLabel.setBounds(30, 390, 200, 20);
         f.add(domainTypeLabel);
 
-        JLabel domainTypeField = new JLabel("NetworkID");
+        JLabel domainTypeField = new JLabel(properties.getProperty("domainType"));
         domainTypeField.setBounds(250, 390, 100, 20);
         domainTypeField.setToolTipText("<html>Here I have been using domain as NetworkID, incase you want to use something else like your DUNS or userID,<br>check cXML Solutions guide and use one of the supported domain.</html>");
         f.add(domainTypeField);
@@ -156,7 +156,7 @@ class UI{
         autoPublishEnabledLabel.setBounds(30, 420, 200, 20);
         f.add(autoPublishEnabledLabel);
 
-        JLabel autoPublishEnabledField = new JLabel("false");
+        JLabel autoPublishEnabledField = new JLabel(properties.getProperty("autoPublishEnabled"));
         autoPublishEnabledField.setBounds(250, 420, 100, 20);
         f.add(autoPublishEnabledField);
 
@@ -165,7 +165,7 @@ class UI{
         URLPostEnabledLabel.setBounds(30, 450, 200, 20);
         f.add(URLPostEnabledLabel);
 
-        JLabel URLPostEnabledField = new JLabel("false");
+        JLabel URLPostEnabledField = new JLabel(properties.getProperty("URLPostEnabled"));
         URLPostEnabledField.setBounds(250, 450, 100, 20);
         f.add(URLPostEnabledField);
 
@@ -191,6 +191,8 @@ class UI{
         }
 
         properties.store(new FileOutputStream("config.properties"), null);
+
+        return f;
     }
 
     private static class InfoListener implements ActionListener{
