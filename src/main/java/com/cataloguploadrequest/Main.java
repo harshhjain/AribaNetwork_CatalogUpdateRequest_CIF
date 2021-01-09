@@ -14,8 +14,11 @@ public class Main {
     public static void main(String[] args) throws IOException, ParserConfigurationException, TransformerException, URISyntaxException, InterruptedException {
 //JAXBException,
         com.cataloguploadrequest.UI ui = new com.cataloguploadrequest.UI();
-        JFrame f = ui.userInterface();
-
+        ui.userInterface();
+//        JLabel autoPublishEnabledLabel = new JLabel("response");
+//        autoPublishEnabledLabel.setBounds(30, 510, 200, 20);
+//        f.add(autoPublishEnabledLabel);
+//        f.revalidate();
 
         com.cataloguploadrequest.cXMLBuilder cb = new com.cataloguploadrequest.cXMLBuilder();
         cb.createcXML();

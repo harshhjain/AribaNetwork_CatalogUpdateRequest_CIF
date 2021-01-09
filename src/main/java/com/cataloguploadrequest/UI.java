@@ -17,7 +17,7 @@ class Inc{
 }
 
 class UI{
-    public static JFrame userInterface() throws FileNotFoundException, IOException{
+    public static void userInterface() throws FileNotFoundException, IOException{
         Properties properties = new Properties();
         FileInputStream input = new FileInputStream("config.properties");
         properties.load(input);
@@ -192,7 +192,7 @@ class UI{
 
         properties.store(new FileOutputStream("config.properties"), null);
 
-        return f;
+//        return f;
     }
 
     private static class InfoListener implements ActionListener{

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE cXML SYSTEM "http://xml.cXML.org/schemas/cXML/1.2.046/cXML.dtd">
-<cXML payloadID="1610224190159ViaHVJPosterTool" timestamp="2021-01-09 12:29:50.16" version="1.2.046" xml:lang="en-US">
+<cXML payloadID="1610227502901ViaHVJPosterTool" timestamp="2021-01-09 13:25:02.903" version="1.2.046" xml:lang="en-US">
   <Header>
     <From>
       <Credential domain="NetworkID">
@@ -22,7 +22,7 @@
   </Header>
   <Request>
     <CatalogUploadRequest operation="new">
-      <CatalogName xml:lang="en-US">Nam</CatalogName>
+      <CatalogName xml:lang="en-US">Name</CatalogName>
       <Description xml:lang="en-US">Catalog Description</Description>
       <Attachment>
         <URL>cid:attachment</URL>

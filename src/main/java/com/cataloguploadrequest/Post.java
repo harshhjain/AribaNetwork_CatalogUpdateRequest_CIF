@@ -1,5 +1,6 @@
 package com.cataloguploadrequest;
 
+import javax.swing.*;
 import java.net.http.*;
 import java.net.http.HttpRequest.BodyPublishers;
 import java.net.http.HttpResponse.BodyHandlers;
@@ -34,8 +35,23 @@ public class Post {
 
         HttpResponse<String> response = client.send(request, BodyHandlers.ofString());
         System.out.println(response.body());
+
+        JFrame f1 = new JFrame("Response Details");
+
+        JLabel responseLabel = new JLabel("Response cXML");
+        responseLabel.setBounds(30, 30, 200, 20);
+        f1.add(responseLabel);
+
+        JTextArea  responseField = new JTextArea (response.body());
+        responseField.setBounds(30, 60, 800, 200);
+        responseField.setToolTipText("Response which AN has sent");
+        f1.add(responseField);
+
+        f1.setSize(850, 800);
+        f1.setLayout(null);
+        f1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        f1.setVisible(true);
+
     }
-    public static void main(String []args) throws IOException, URISyntaxException, InterruptedException{
-        HttpPost();
-    }
+
 }
