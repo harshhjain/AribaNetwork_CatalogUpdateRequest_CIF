@@ -1,22 +1,19 @@
 package com.cataloguploadrequest;
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Scanner;
-import java.util.concurrent.TimeUnit;
-import java.util.Properties;
 import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.Properties;
 
 class Inc{
-	int i;
-	public Inc(){
-		i = 0;
-	}
+    int i;
+    public Inc(){
+        i = 0;
+    }
 }
 
 class UI{
@@ -177,9 +174,9 @@ class UI{
         JButton submit = new JButton("Save & Post");
         submit.setBounds(90, 480, 200, 30);
         Inc check = new Inc();
-        InfoListener ls = new InfoListener(check, properties, f, XMLVersionField, URLField, operationTypeField, fromIdentityValueField, 
-        	senderIdentityValueField, buyerIdentityValueField, sharedSecretValueField, catalogNameValueField, catalogDescriptionField,
-        	emailAddressField);
+        InfoListener ls = new InfoListener(check, properties, f, XMLVersionField, URLField, operationTypeField, fromIdentityValueField,
+                senderIdentityValueField, buyerIdentityValueField, sharedSecretValueField, catalogNameValueField, catalogDescriptionField,
+                emailAddressField);
         submit.addActionListener(ls);
         f.add(submit);
 
@@ -196,19 +193,19 @@ class UI{
         properties.store(new FileOutputStream("config.properties"), null);
     }
 
-	private static class InfoListener implements ActionListener{
-		Inc i;
-		Properties properties;
+    private static class InfoListener implements ActionListener{
+        Inc i;
+        Properties properties;
         JFrame f;
-        JTextField XMLVersionField, URLField, operationTypeField, fromIdentityValueField, 
-        	senderIdentityValueField, buyerIdentityValueField, sharedSecretValueField, catalogNameValueField, catalogDescriptionField,
-        	emailAddressField;
+        JTextField XMLVersionField, URLField, operationTypeField, fromIdentityValueField,
+                senderIdentityValueField, buyerIdentityValueField, sharedSecretValueField, catalogNameValueField, catalogDescriptionField,
+                emailAddressField;
 
         public InfoListener(Inc i, Properties properties, JFrame f, JTextField XMLVersionField, JTextField URLField, JTextField operationTypeField,
-        					JTextField fromIdentityValueField, JTextField senderIdentityValueField, JTextField buyerIdentityValueField,
-        					JTextField sharedSecretValueField, JTextField catalogNameValueField, JTextField catalogDescriptionField,
-        					JTextField emailAddressField){
-        	this.i = i;
+                            JTextField fromIdentityValueField, JTextField senderIdentityValueField, JTextField buyerIdentityValueField,
+                            JTextField sharedSecretValueField, JTextField catalogNameValueField, JTextField catalogDescriptionField,
+                            JTextField emailAddressField){
+            this.i = i;
             this.properties = properties;
             this.f = f;
             this.XMLVersionField = XMLVersionField;
@@ -224,18 +221,18 @@ class UI{
         }
 
         public void actionPerformed(ActionEvent e){
-        	properties.setProperty("XMLVersion", XMLVersionField.getText());
-        	properties.setProperty("URL", URLField.getText());
-        	properties.setProperty("operationType", operationTypeField.getText());
-        	properties.setProperty("fromIdentityValue", fromIdentityValueField.getText());
-        	properties.setProperty("senderIdentityValue", senderIdentityValueField.getText());
-        	properties.setProperty("toIdentityValue", buyerIdentityValueField.getText());
-        	properties.setProperty("sharedSecretValue", sharedSecretValueField.getText());
-        	properties.setProperty("catalogNameValue", catalogNameValueField.getText());
-        	properties.setProperty("catalogDescription", catalogDescriptionField.getText());
-        	properties.setProperty("emailAddress", emailAddressField.getText());
+            properties.setProperty("XMLVersion", XMLVersionField.getText());
+            properties.setProperty("URL", URLField.getText());
+            properties.setProperty("operationType", operationTypeField.getText());
+            properties.setProperty("fromIdentityValue", fromIdentityValueField.getText());
+            properties.setProperty("senderIdentityValue", senderIdentityValueField.getText());
+            properties.setProperty("toIdentityValue", buyerIdentityValueField.getText());
+            properties.setProperty("sharedSecretValue", sharedSecretValueField.getText());
+            properties.setProperty("catalogNameValue", catalogNameValueField.getText());
+            properties.setProperty("catalogDescription", catalogDescriptionField.getText());
+            properties.setProperty("emailAddress", emailAddressField.getText());
 
-        	
+
 
             f.removeAll();
             f.setVisible(false);

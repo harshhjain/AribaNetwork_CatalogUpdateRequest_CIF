@@ -12,8 +12,8 @@ public class Main {
 
     public static void main(String[] args) throws IOException, ParserConfigurationException, TransformerException, URISyntaxException, InterruptedException {
 //JAXBException,
-    	com.cataloguploadrequest.UI ui = new com.cataloguploadrequest.UI();
-    	ui.userInterface();
+        com.cataloguploadrequest.UI ui = new com.cataloguploadrequest.UI();
+        ui.userInterface();
 
         com.cataloguploadrequest.cXMLBuilder cb = new com.cataloguploadrequest.cXMLBuilder();
         cb.createcXML();
