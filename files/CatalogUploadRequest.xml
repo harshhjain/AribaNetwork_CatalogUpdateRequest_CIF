@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE cXML SYSTEM "http://xml.cXML.org/schemas/cXML/1.2.025/cXML.dtd">
-<cXML payloadID="1598294872659" timestamp="2020-08-24 11:47:52.66" version="1.2.025" xml:lang="en-US">
+<!DOCTYPE cXML SYSTEM "http://xml.cXML.org/schemas/cXML/1.2.046/cXML.dtd">
+<cXML payloadID="1610213769685ViaHVJPosterTool" timestamp="2021-01-09 09:36:09.686" version="1.2.046" xml:lang="en-US">
   <Header>
     <From>
       <Credential domain="NetworkID">
@@ -17,12 +17,12 @@
         <Identity>Supplier_ANID</Identity>
         <SharedSecret>*********</SharedSecret>
       </Credential>
-      <UserAgent>AribaNetwork_CatalogUpdateRequest_CIF</UserAgent>
+      <UserAgent>HVJ Poster Tool</UserAgent>
     </Sender>
   </Header>
   <Request>
     <CatalogUploadRequest operation="new">
-      <CatalogName xml:lang="en-US">Name</CatalogName>
+      <CatalogName xml:lang="en-US">Name1</CatalogName>
       <Description xml:lang="en-US">'Catalog Description'</Description>
       <Attachment>
         <URL>cid:attachment</URL>

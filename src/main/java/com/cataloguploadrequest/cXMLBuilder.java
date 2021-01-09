@@ -182,7 +182,7 @@ public class cXMLBuilder {
 
     public String createPayload() {
         Timestamp timestamp = new Timestamp(System.currentTimeMillis());
-        return String.valueOf(timestamp.getTime());
+        return String.valueOf(timestamp.getTime())+"ViaHVJPosterTool";
     }
 
     public String createTimeStamp() {
