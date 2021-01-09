@@ -70,17 +70,17 @@ class UI{
 
         JTextField senderIdentityValueField = new JTextField(properties.getProperty("senderIdentityValue"));
         senderIdentityValueField.setBounds(250, 150, 400, 20);
-        senderIdentityValueField.setToolTipText("Enter Sender_ANID which should be your Supplier_ANID");
+        senderIdentityValueField.setToolTipText("Enter Sender ANID which should be same as Supplier's ANID");
         f.add(senderIdentityValueField);
 
         /////////////////////////////
-        JLabel buyerIdentityValueLabel = new JLabel("Sender Identity Value:");
+        JLabel buyerIdentityValueLabel = new JLabel("Buyer Identity Value:");
         buyerIdentityValueLabel.setBounds(30, 180, 200, 20);
         f.add(buyerIdentityValueLabel);
 
         JTextField buyerIdentityValueField = new JTextField(properties.getProperty("toIdentityValue"));
         buyerIdentityValueField.setBounds(250, 180, 400, 20);
-        buyerIdentityValueField.setToolTipText("Enter Sender_ANID which should be your Supplier_ANID");
+        buyerIdentityValueField.setToolTipText("<html>Enter Buyer's ANID to which you want to send the catalog.<br>For a public catalog user 'AN01000000001' as Buyer's ANID.</html>");
         f.add(buyerIdentityValueField);
 
         /////////////////////////////

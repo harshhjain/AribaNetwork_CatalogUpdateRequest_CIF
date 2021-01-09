@@ -38,7 +38,7 @@ public class Post {
 
         JFrame f1 = new JFrame("Response Details");
 
-        JLabel responseLabel = new JLabel("Response cXML");
+        JLabel responseLabel = new JLabel("Response cXML:");
         responseLabel.setBounds(30, 30, 200, 20);
         f1.add(responseLabel);
 
@@ -46,6 +46,19 @@ public class Post {
         responseField.setBounds(30, 60, 800, 200);
         responseField.setToolTipText("Response which AN has sent");
         f1.add(responseField);
+
+        /////////////////////////////////////
+
+        JLabel requestMIMELabel = new JLabel("Request MIME:");
+        requestMIMELabel.setBounds(30, 300, 200, 20);
+        f1.add(requestMIMELabel);
+
+        JTextArea  responseMIMEField = new JTextArea (response.body());
+        responseMIMEField.setBounds(30, 330, 800, 200);
+        responseMIMEField.setToolTipText("Response which AN has sent");
+        f1.add(responseMIMEField);
+
+        /////////////////////////////////////
 
         f1.setSize(850, 800);
         f1.setLayout(null);
