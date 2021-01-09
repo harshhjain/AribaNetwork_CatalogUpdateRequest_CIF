@@ -88,7 +88,12 @@ class UI{
         sharedSecretValueLabel.setBounds(30, 210, 200, 20);
         f.add(sharedSecretValueLabel);
 
-        JTextField sharedSecretValueField = new JTextField(properties.getProperty("sharedSecretValue"));
+//        JTextField sharedSecretValueField = new JTextField(properties.getProperty("sharedSecretValue"));
+//        sharedSecretValueField.setBounds(250, 210, 400, 20);
+//        sharedSecretValueField.setToolTipText("Enter Shared Secret which should be the Supplier's Shared Secret");
+//        f.add(sharedSecretValueField);
+
+        JPasswordField sharedSecretValueField = new JPasswordField(properties.getProperty("sharedSecretValue"));
         sharedSecretValueField.setBounds(250, 210, 400, 20);
         sharedSecretValueField.setToolTipText("Enter Shared Secret which should be the Supplier's Shared Secret");
         f.add(sharedSecretValueField);
@@ -200,12 +205,13 @@ class UI{
         Properties properties;
         JFrame f;
         JTextField XMLVersionField, URLField, operationTypeField, fromIdentityValueField,
-                senderIdentityValueField, buyerIdentityValueField, sharedSecretValueField, catalogNameValueField, catalogDescriptionField,
+                senderIdentityValueField, buyerIdentityValueField, catalogNameValueField, catalogDescriptionField,
                 emailAddressField;
+        JPasswordField sharedSecretValueField;
 
         public InfoListener(Inc i, Properties properties, JFrame f, JTextField XMLVersionField, JTextField URLField, JTextField operationTypeField,
                             JTextField fromIdentityValueField, JTextField senderIdentityValueField, JTextField buyerIdentityValueField,
-                            JTextField sharedSecretValueField, JTextField catalogNameValueField, JTextField catalogDescriptionField,
+                            JPasswordField sharedSecretValueField, JTextField catalogNameValueField, JTextField catalogDescriptionField,
                             JTextField emailAddressField){
             this.i = i;
             this.properties = properties;
@@ -229,10 +235,10 @@ class UI{
             properties.setProperty("fromIdentityValue", fromIdentityValueField.getText());
             properties.setProperty("senderIdentityValue", senderIdentityValueField.getText());
             properties.setProperty("toIdentityValue", buyerIdentityValueField.getText());
-            properties.setProperty("sharedSecretValue", sharedSecretValueField.getText());
+            char[] SS = sharedSecretValueField.getPassword();
+            properties.setProperty("sharedSecretValue", String.valueOf(SS));
             properties.setProperty("catalogNameValue", catalogNameValueField.getText());
             properties.setProperty("catalogDescription", catalogDescriptionField.getText());
-            properties.setProperty("emailAddress", emailAddressField.getText());
 
 
 
