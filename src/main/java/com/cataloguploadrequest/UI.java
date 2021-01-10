@@ -30,7 +30,7 @@ class UI{
 
         JTextField XMLVersionField = new JTextField(properties.getProperty("XMLVersion"));
         XMLVersionField.setBounds(250, 30, 400, 20);
-        XMLVersionField.setToolTipText("Enter the DTD version you want to use, as of Aug 2020, Ariba Network supports till version 1.2.046");
+        XMLVersionField.setToolTipText("<HTML>Enter the DTD version you want to use<BR>Check http://cxml.org/ to get know the latest DTD version.");
         f.add(XMLVersionField);
 
         /////////////////////////////
@@ -40,7 +40,7 @@ class UI{
 
         JTextField URLField = new JTextField(properties.getProperty("URL"));
         URLField.setBounds(250, 60, 400, 20);
-        URLField.setToolTipText("URL where you want to URL to be posted, as of Aug 2020 'https://service.ariba.com/ANCatalogProcessor.aw/ad/catalog' is the URL, you can check the lastest URL by posting a ProfileRequest to AN. ");
+        URLField.setToolTipText("<html>Ariba Network which takes catalog MIME.<br>To confirm the URL post ProfileRequest to AN.</html>");
         f.add(URLField);
 
         /////////////////////////////
@@ -177,7 +177,7 @@ class UI{
 
         /////////////////////////////
         JButton submit = new JButton("Save & Post");
-        submit.setBounds(90, 480, 200, 30);
+        submit.setBounds(200, 480, 200, 30);
         Inc check = new Inc();
         InfoListener ls = new InfoListener(check, properties, f, XMLVersionField, URLField, operationTypeField, fromIdentityValueField,
                 senderIdentityValueField, buyerIdentityValueField, sharedSecretValueField, catalogNameValueField, catalogDescriptionField,
@@ -186,7 +186,7 @@ class UI{
         f.add(submit);
 
 
-        f.setSize(850, 800);
+        f.setSize(850, 600);
         f.setLayout(null);
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         f.setVisible(true);
@@ -239,7 +239,7 @@ class UI{
             properties.setProperty("sharedSecretValue", String.valueOf(SS));
             properties.setProperty("catalogNameValue", catalogNameValueField.getText());
             properties.setProperty("catalogDescription", catalogDescriptionField.getText());
-
+            properties.setProperty("emailAddress", emailAddressField.getText());
 
 
             f.removeAll();

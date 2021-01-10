@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE cXML SYSTEM "http://xml.cXML.org/schemas/cXML/1.2.046/cXML.dtd">
-<cXML payloadID="1610229675421ViaHVJPosterTool" timestamp="2021-01-09 14:01:15.422" version="1.2.046" xml:lang="en-US">
+<cXML payloadID="1610247868587ViaHVJPosterTool" timestamp="2021-01-09 19:04:28.588" version="1.2.046" xml:lang="en-US">
   <Header>
     <From>
       <Credential domain="NetworkID">
-        <Identity>Supplier_ANID</Identity>
+        <Identity>Hover Over to get hint</Identity>
       </Credential>
     </From>
     <To>
       <Credential domain="NetworkID">
-        <Identity>Buyer_ANID</Identity>
+        <Identity>Hover Over to get hint</Identity>
       </Credential>
     </To>
     <Sender>
       <Credential domain="NetworkID">
-        <Identity>Supplier_ANID</Identity>
-        <SharedSecret>*********</SharedSecret>
+        <Identity>Hover Over to get hint</Identity>
+        <SharedSecret>Hover Over to get hint</SharedSecret>
       </Credential>
       <UserAgent>HVJ Poster Tool</UserAgent>
     </Sender>
   </Header>
   <Request>
-    <CatalogUploadRequest operation="new">
-      <CatalogName xml:lang="en-US">Name</CatalogName>
-      <Description xml:lang="en-US">Catalog Description</Description>
+    <CatalogUploadRequest operation="Hover Over to get hint">
+      <CatalogName xml:lang="en-US">Hover Over to get hint</CatalogName>
+      <Description xml:lang="en-US">Hover Over to get hint</Description>
       <Attachment>
         <URL>cid:attachment</URL>
       </Attachment>
